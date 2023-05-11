@@ -1,0 +1,117 @@
+Struktura DB
+
+1.
+adminds
+- id (pk)
+- name
+- email (unq)
+- password
+- phone
+- adress
+- status
+    - aktnivní
+    - neaktivní
+- type
+    - admin
+    - spolupracovník 
+- create_at
+- updated_at
+
+2.
+users
+- id (pk)
+- name
+- email (unq)
+- password
+- phone
+- adress
+- status
+    - aktnivní
+    - neaktivní
+- create_at
+- updated_at
+
+3.
+categories
+- id(pk)
+- title
+- friendly_URL (unq)
+- status
+    - aktnivní
+    - neaktivní
+- create_at
+- updated_at
+
+4.
+brands
+- id(pk)
+- title
+- friendly_URL (unq)
+- status
+    - aktnivní
+    - neaktivní
+- create_at
+- updated_at
+
+5.
+products
+- id(pk)
+- title
+- friendly_URL (unq)
+- description
+- summary (souhrn)
+- stock (qty)
+- price 
+- discounted_price (opt)
+- images // src link
+- category_id (fk)
+- brand_id (fk)
+- status
+    - aktnivní
+    - neaktivní
+- create_at
+- updated_at
+
+6.
+reviews
+- id(pk)
+- user_id (fk)
+- product_id (fk)
+- comment
+- ratting
+- create_at
+- updated_at
+
+7.
+orders
+- id (pk)
+- user_id (fk)
+- status
+    - přijato ke zpracování
+    - zpracovává se
+    - odesláno
+    - doručeno
+    - storno
+    - reklamace
+    - vrácení
+- created_at
+- updated_at
+
+8.
+order_detail
+- id (pk)
+- order_id (fk)
+- product_id (fk)
+- qty
+- price 
+- total
+- created_at
+- updated_at
+
+9.
+documents
+- id (pk)
+- title 
+- description
+- created_at
+- updated_at
