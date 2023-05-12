@@ -17,6 +17,18 @@ adminds
 - create_at
 - updated_at
 
+            $table->id();
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+            $table->string('phone',30);
+            $table->text('adress');
+            $table->enum('type', ['admin', 'spolupracovník'])->default('spolupracovník');
+            $table->enum('status', ['aktivní', 'neaktivní'])->default('aktivní');
+            $table->rememberToken();
+            $table->timestamps();
+
 2.
 users
 - id (pk)
@@ -31,6 +43,17 @@ users
 - create_at
 - updated_at
 
+            $table->id();
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+            $table->string('phone',30);
+            $table->text('adress');
+            $table->enum('status', ['aktivní', 'neaktivní'])->default('aktivní');
+            $table->rememberToken();
+            $table->timestamps();
+
 3.
 categories
 - id(pk)
@@ -42,6 +65,13 @@ categories
 - create_at
 - updated_at
 
+            $table->id();
+            $table->string('title');
+            $table->string('friendly_URL')->unique();
+            $table->enum('status', ['aktivní', 'neaktivní'])->default('aktivní');
+            $table->rememberToken();
+            $table->timestamps();
+
 4.
 brands
 - id(pk)
@@ -52,6 +82,13 @@ brands
     - neaktivní
 - create_at
 - updated_at
+
+            $table->id();
+            $table->string('title');
+            $table->string('friendly_URL')->unique();
+            $table->enum('status', ['aktivní', 'neaktivní'])->default('aktivní');
+            $table->rememberToken();
+            $table->timestamps();
 
 5.
 products
@@ -72,6 +109,21 @@ products
 - create_at
 - updated_at
 
+            $table->id();
+            $table->string('title');
+            $table->string('friendly_URL')->unique();
+            $table->text('description');
+            $table->text('summary');
+            $table->tinyInteger('stock')->unsigned();
+            $table->double('price');
+            $table->double('discounted_price');
+            $table->text('images');
+            $table->foreignIdFor(Category::class)->constrained();
+            $table->foreignIdFor(Brand::class)->constrained();
+            $table->enum('status', ['aktivní', 'neaktivní'])->default('aktivní');
+            $table->rememberToken();
+            $table->timestamps();
+
 6.
 reviews
 - id(pk)
@@ -81,6 +133,14 @@ reviews
 - ratting
 - create_at
 - updated_at
+
+            $table->id();
+            $table->foreignIdFor(User::class)->constrained();
+            $table->foreignIdFor(Product::class)->constrained();
+            $table->text('comment');
+            $table->tinyInteger('rating');
+            $table->rememberToken();
+            $table->timestamps();
 
 7.
 orders
@@ -97,6 +157,11 @@ orders
 - created_at
 - updated_at
 
+            $table->id();
+            $table->foreignIdFor(User::class)->constrained();
+            $table->enum('status', ['přijato ke zpracování', 'zpracovává se', 'odesláno', 'doručeno', 'storno', 'reklamace', 'vrácení'])->default('přijato ke zpracování');
+            $table->timestamps();
+
 8.
 order_detail
 - id (pk)
@@ -108,6 +173,14 @@ order_detail
 - created_at
 - updated_at
 
+            $table->id();
+            $table->foreignIdFor(Order::class)->constrained();
+            $table->foreignIdFor(Product::class)->constrained();
+            $table->tinyInteger('qty');
+            $table->double('price');
+            $table->double('total');
+            $table->timestamps();
+
 9.
 documents
 - id (pk)
@@ -115,3 +188,36 @@ documents
 - description
 - created_at
 - updated_at
+
+            $table->id();
+            $table->string('title');
+            $table->string('friendly_URL')->unique();
+            $table->text('description');
+
+10.
+shippings
+- id (pk)
+- title
+- price 
+- created_at
+- updated_at
+
+            $table->id();
+            $table->string('title');
+            $table->double('price');
+            $table->timestamps();
+
+11. 
+payments
+- id 
+- title
+- price
+- shipping_id (fk)
+- created_at
+- updated_at
+
+            $table->id();
+            $table->foreignIdFor(Shipping::class)->constrained();
+            $table->string('title');
+            $table->double('price');
+            $table->timestamps();
