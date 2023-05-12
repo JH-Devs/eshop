@@ -9,7 +9,7 @@ adminds
 - phone
 - adress
 - status
-    - aktnivní
+    - aktivní
     - neaktivní
 - type
     - admin
@@ -38,7 +38,7 @@ users
 - phone
 - adress
 - status
-    - aktnivní
+    - aktivní
     - neaktivní
 - create_at
 - updated_at
@@ -130,7 +130,7 @@ reviews
 - user_id (fk)
 - product_id (fk)
 - comment
-- ratting
+- rating
 - create_at
 - updated_at
 
@@ -185,6 +185,7 @@ order_detail
 documents
 - id (pk)
 - title 
+- friendly_URL (unq)
 - description
 - created_at
 - updated_at
