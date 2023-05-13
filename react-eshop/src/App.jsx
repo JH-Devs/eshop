@@ -1,10 +1,12 @@
-import Dashboard from "./pages/cms/dashboard/Dashboard"
+import React from 'react'
+import {BrowserRouter} from 'react-router-dom'
+import  AdminRoutes  from './routes/AdminRoutes'
 
 function App() {
    return (
-      <>
-      <Dashboard/>
-      </>
+      <BrowserRouter>
+         <AdminRoutes/>
+      </BrowserRouter>
    )
 }
 
