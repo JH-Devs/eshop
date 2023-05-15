@@ -1,0 +1,51 @@
+.users{
+    box-shadow: var(--box-shadow);
+    padding: 10px;
+    height: 95vh;
+    margin-bottom: 50px;
+    
+    .header__users{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .btn__plus{
+            border: none;
+            background-color: green;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            padding: 5px;
+        }
+    }
+    .table{
+        margin-top: 25px;
+
+        .img__user{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .action{
+            display: flex;
+            justify-content: space-between;
+
+            .icon__eye{
+                color:orange;
+                font-size: 20px;
+                cursor: pointer;
+            }
+            .icon__edit{
+                color: blue;
+                font-size: 20px;
+                cursor: pointer;
+            }
+            .icon__trash{
+                color: red;
+               cursor: pointer;
+            }
+        }
+    }
+}

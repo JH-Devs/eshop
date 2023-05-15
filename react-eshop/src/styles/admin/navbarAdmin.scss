@@ -1,0 +1,61 @@
+.navbar{
+   
+.notice{
+    position: relative;
+    margin-left: 75%;
+    
+    .badge__notice{
+        position: absolute;
+        top: 0%;
+        left:15%;
+        width: 15px;
+        height: 15px;
+        color:black;
+        content: '';
+        background-color: yellow;
+        border-radius: 50%;
+        font-size: 14px;
+        font-weight: 400;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .mail__icon{
+        margin-left: 20px;
+    }
+    .badge__mail{
+        position: absolute;
+        top: 0%;
+        left:85%;
+        width: 15px;
+        height: 15px;
+        color:white;
+        content: '';
+        background-color: blue;
+        border-radius: 50%;
+        font-size: 14px;
+        font-weight: 400;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.admin_name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    margin-right: 30px;
+
+    .icon{
+        margin-right: 5px;
+        color: gray;
+    }
+    p{
+        align-items: center;
+    }
+}
+}

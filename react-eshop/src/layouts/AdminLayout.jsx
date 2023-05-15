@@ -1,8 +1,9 @@
 import React from "react"
 import {Container, Row} from "react-bootstrap"
 import "../styles/admin/style.scss"
-import NavbarAdmin from "../pages/admin/dashboard/NavbarAdmin"
-import Sidebar from "../pages/admin/dashboard/Sidebar"
+import NavbarAdmin from "../components/admin/NavbarAdmin"
+import Sidebar from "../components/admin/Sidebar"
+import Footer  from "../components/Footer"
 
 const AdminLayout=()=> {
     return(  
@@ -10,6 +11,10 @@ const AdminLayout=()=> {
         <Row>
             <NavbarAdmin/>
            <Sidebar/>
+           <main>
+
+           </main>             
+           <Footer />
         </Row>
     </Container>
     )

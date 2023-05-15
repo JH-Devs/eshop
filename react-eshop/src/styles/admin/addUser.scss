@@ -1,0 +1,34 @@
+.add__user{
+    width: 60%;
+    margin-left:25%;
+
+    form{
+        box-shadow: var(--box-shadow);
+        border-radius: 5px;
+        padding: 20px;
+
+        .buttons{
+            display: flex;
+            justify-content: space-between;
+
+            .btn__return{
+                border: none;
+                text-decoration: none;
+                background-color: orange;
+                color:white;
+                padding: 5px 10px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .btn__add{
+                border: none;
+                background-color: green;
+                color:white;
+                padding: 5px 10px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+   
+}

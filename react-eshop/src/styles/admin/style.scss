@@ -6,4 +6,21 @@
 @import "@fortawesome/fontawesome-free/scss/brands";
 
 @import "./sidebar.scss";
+@import "./navbarAdmin.scss";
+@import "./dashboard.scss";
+@import "./users.scss";
+@import "./addUser.scss";
 
+
+:root{
+    --box-shadow:2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+}
+section{
+    margin-left: 250px;
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+body{
+    min-height: 100vh;
+}

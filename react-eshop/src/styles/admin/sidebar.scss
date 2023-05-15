@@ -2,8 +2,9 @@
 .sidebar{
     position: absolute;
     min-height: 100vh;
-    width:270px;
-    margin-top: 55px;
+    width:200px;
+    margin-top: 0px;
+   
 
     .top{
         height: 30px;
@@ -12,7 +13,6 @@
 
         .logo{
             font-size:15px;
-            color:var(--bg-light);
         }
     }
 
@@ -27,7 +27,6 @@
             .title{
                 font-size: 10px;
                 font-weight: bold;
-                color:var(--bg-light);
                 margin-top:15px;
                 text-transform: uppercase;
                 margin-bottom: 5px;
@@ -38,27 +37,25 @@
                 padding: 10px;
                 cursor:pointer;
 
-                .icon{
-                    font-size: 18px;
-                    color:var(--link-hover-color)
-                }
+
                span{
                     margin-left: 10px;
                     font-size: 14px;
                     font-weight: 400;
                 .nav__active{
-                    color:var(--link-hover-color);
-                    font-weight: 600;
+                    color:#fd7e14;
+                    font-weight: 500;
+                    text-transform: uppercase;
                 }
                }
                 span a{
-                    color:var(--primary-color);
+                    color:gray;
                     text-decoration:none;
                     
                     
 
                     &:hover{
-                        color:var(--link-hover-color);
+                        color:#fd7e14;
                     }
                   
                 }
