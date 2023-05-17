@@ -1,7 +1,7 @@
 import React from 'react'
 import NavbarAdmin from '../../components/admin/NavbarAdmin'
 import Sidebar from '../../components/admin/Sidebar'
-import Footer from '../../components/Footer'
+import Footer from '../../components/admin/Footer'
 
 const Messages = () => {
   return (

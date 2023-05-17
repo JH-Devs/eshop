@@ -1,15 +1,17 @@
 import React from 'react'
 import NavbarAdmin from '../../components/admin/NavbarAdmin'
 import Sidebar from '../../components/admin/Sidebar'
-import Footer from '../../components/Footer'
+import Footer from '../../components/admin/Footer'
 import {AiFillEye} from 'react-icons/ai'
 import {FaTrash} from 'react-icons/fa'
+import Helmet from "../../components/admin/Helmet/Helmet"
 
 const Orders = () => {
   return (
     <>
     <NavbarAdmin/>
     <Sidebar/>
+      <Helmet title="Objednávky">
     <section className='users'>
       <div className="header__users">
         <h5 className='text-warning'>Objednávky</h5>
@@ -64,7 +66,7 @@ const Orders = () => {
   </tbody>
 </table>
     </section>
-  
+    </Helmet>
     <Footer />
     </>
   )

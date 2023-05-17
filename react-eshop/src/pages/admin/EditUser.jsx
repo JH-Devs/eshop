@@ -4,13 +4,13 @@ import Sidebar from '../../components/admin/Sidebar'
 import Footer from '../../components/admin/Footer'
 import { Link } from 'react-router-dom'
 
-const AddUser = () => {
+const EditUser = () => {
   return (
     <>
 <NavbarAdmin/>
     <Sidebar/>
      <section className='add__user'>
-     <h5 className='text-warning'>Přidat uživatele</h5>
+     <h5 className='text-warning'>Upravit uživatele</h5>
      <form>
         <div className="mb-3">
             <label  className="form-label">Jméno</label>
@@ -42,7 +42,7 @@ const AddUser = () => {
         </div>
        <div className="buttons">
        <Link type="button" to="/admin/uzivatele" className='btn__return'>zpět</Link>
-        <button type="submit" className="btn__add">Přidat</button>
+        <button type="submit" className="btn__add">upravit</button>
        </div>
         </form>
      </section>
@@ -52,4 +52,4 @@ const AddUser = () => {
   )
 }
 
-export default AddUser
+export default EditUser

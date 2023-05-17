@@ -4,13 +4,13 @@ import Sidebar from '../../components/admin/Sidebar'
 import Footer from '../../components/admin/Footer'
 import { Link } from 'react-router-dom'
 
-const AddProduct = () => {
+const EditProduct = () => {
   return (
     <>
 <NavbarAdmin/>
     <Sidebar/>
      <section className='add__user'>
-     <h5 className='text-warning'>Přidat produkt</h5>
+     <h5 className='text-warning'>Upravit produkt</h5>
      <form>
         <div className="mb-3">
             <label  className="form-label">Název</label>
@@ -76,7 +76,7 @@ const AddProduct = () => {
         </div>
        <div className="buttons">
        <Link type="button" to="/admin/produkty" className='btn__return'>zpět</Link>
-        <button type="submit" className="btn__add">Přidat</button>
+        <button type="submit" className="btn__add">upravit</button>
        </div>
         </form>
      </section>
@@ -86,4 +86,4 @@ const AddProduct = () => {
   )
 }
 
-export default AddProduct
+export default EditProduct

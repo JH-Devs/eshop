@@ -24,6 +24,13 @@ import AddShipping from "../pages/admin/AddShipping";
 import AddPayment from "../pages/admin/AddPayment";
 import AddDocument from "../pages/admin/AddDocument";
 import AddProduct from "../pages/admin/AddProduct";
+import EditUser from "../pages/admin/EditUser";
+import EditProduct from "../pages/admin/EditProduct";
+import EditBrand from "../pages/admin/EditBrand";
+import EditCategory from "../pages/admin/EditCategory";
+import EditShipping from "../pages/admin/Editshipping";
+import EditPayment from "../pages/admin/EditPayment"
+import EditDocument from "../pages/admin/EditDocument"
 
 const AdminRoutes=() => {
   return (
@@ -37,27 +44,35 @@ const AdminRoutes=() => {
 
    <Route path="/admin/uzivatele" element={<Users/>} />
    <Route path="/admin/uzivatele/pridat" element={<AddUser/>} />
+   <Route path="/admin/uzivatele/upravit/:id" element={<EditUser/>} />
+
 
    <Route path="/admin/produkty" element={<Products/>} />
    <Route path="/admin/produkty/pridat" element={<AddProduct/>} />
+   <Route path="/admin/produkty/upravit/:id" element={<EditProduct/>} />
 
 
    <Route path="/admin/znacky" element={<Brands/>} />
    <Route path="/admin/znacky/pridat" element={<AddBrand/>} />
+   <Route path="/admin/znacky/upravit/:id" element={<EditBrand/>} />
 
    <Route path="/admin/kategorie" element={<Categories/>} />
    <Route path="/admin/kategorie/pridat" element={<AddCategory/>} />
+   <Route path="/admin/kategorie/upravit/:id" element={<EditCategory/>} />
 
    <Route path="/admin/objednavky" element={<Orders/>} />
 
    <Route path="/admin/doprava" element={<Shippings/>} /> 
    <Route path="/admin/doprava/pridat" element={<AddShipping />} />
+   <Route path="/admin/doprava/upravit/:id" element={<EditShipping/>} />
 
    <Route path="/admin/platba" element={<Payments/>} />
    <Route path="/admin/platba/pridat" element={<AddPayment />} />
+   <Route path="/admin/platba/upravit/:id" element={<EditPayment/>} />
 
    <Route path="/admin/dokumenty" element={<Documents/>} />
    <Route path="/admin/dokumenty/pridat" element={<AddDocument/>} />
+   <Route path="/admin/dokumenty/upravit/:id" element={<EditDocument/>} />
 
    <Route path="/admin/statistiky" element={<Statictics/>} />
 

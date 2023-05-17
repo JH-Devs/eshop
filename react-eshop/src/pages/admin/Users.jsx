@@ -1,17 +1,19 @@
 import React from 'react'
-import Footer from '../../components/Footer'
+import Footer from '../../components/admin/Footer'
 import NavbarAdmin from '../../components/admin/NavbarAdmin'
 import Sidebar from '../../components/admin/Sidebar'
 import {AiFillEye} from 'react-icons/ai'
 import {MdEdit} from 'react-icons/md'
 import {FaTrash} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import Helmet from "../../components/admin/Helmet/Helmet"
 
 const Users = () => {
   return (
     <>
      <NavbarAdmin/>
       <Sidebar/>
+      <Helmet title="Uživatelé">
     <section className='users'>
       <div className="header__users">
         <h5 className='text-warning'>Uživatelé</h5>
@@ -42,7 +44,7 @@ const Users = () => {
       <td>
         <div className="action">
           <AiFillEye  className='icon__eye'/>
-          <MdEdit className='icon__edit' />
+          <Link to="/admin/uzivatele/upravit/:id"><MdEdit className='icon__edit' /></Link>
           <FaTrash className='icon__trash' />
         </div>
       </td>
@@ -58,7 +60,7 @@ const Users = () => {
       <td>
         <div className="action">
           <AiFillEye  className='icon__eye'/>
-          <MdEdit className='icon__edit' />
+          <Link to="/admin/uzivatele/upravit/:id"><MdEdit className='icon__edit' /></Link>
           <FaTrash className='icon__trash' />
         </div>
       </td>
@@ -74,7 +76,7 @@ const Users = () => {
       <td>
         <div className="action">
           <AiFillEye  className='icon__eye'/>
-          <MdEdit className='icon__edit' />
+          <Link to="/admin/uzivatele/upravit/:id"><MdEdit className='icon__edit' /></Link>
           <FaTrash className='icon__trash' />
         </div>
       </td>
@@ -82,6 +84,7 @@ const Users = () => {
   </tbody>
 </table>
     </section>
+    </Helmet>
     <Footer />
     </>
    

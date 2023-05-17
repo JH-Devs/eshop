@@ -3,7 +3,7 @@ import {Container, Row} from "react-bootstrap"
 import "../styles/admin/style.scss"
 import NavbarAdmin from "../components/admin/NavbarAdmin"
 import Sidebar from "../components/admin/Sidebar"
-import Footer  from "../components/Footer"
+import Footer  from "../components/admin/Footer"
 
 const AdminLayout=()=> {
     return(  

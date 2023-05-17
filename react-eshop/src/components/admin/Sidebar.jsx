@@ -18,7 +18,7 @@ const Sidebar = () => {
       <Row >
         <Col>
         <div className='top' >
-            <span className='logo text-warning'>Admin panel</span>
+            <span className='logo text-warning ms-2'>Admin panel</span>
         </div>
         <div className='center'>
             <ul>

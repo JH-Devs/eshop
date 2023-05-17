@@ -1,17 +1,19 @@
 import React from 'react'
 import NavbarAdmin from '../../components/admin/NavbarAdmin'
 import Sidebar from '../../components/admin/Sidebar'
-import Footer from '../../components/Footer'
+import Footer from '../../components/admin/Footer'
 import { Link } from 'react-router-dom'
 import {AiFillEye} from 'react-icons/ai'
 import {MdEdit} from 'react-icons/md'
 import {FaTrash} from 'react-icons/fa'
+import Helmet from "../../components/admin/Helmet/Helmet"
 
 const Payments = () => {
   return (
     <>
     <NavbarAdmin/>
     <Sidebar/>
+    <Helmet title="Platba">
     <section className='brands '>
       <div className="header__brands">
         <h5 className='text-warning'>Platby</h5>
@@ -36,7 +38,7 @@ const Payments = () => {
       <td>
         <div className="action">
           <AiFillEye  className='icon__eye'/>
-          <MdEdit className='icon__edit' />
+          <Link to="/admin/platba/upravit/:id"><MdEdit className='icon__edit' /></Link>
           <FaTrash className='icon__trash' />
         </div>
       </td>
@@ -49,7 +51,7 @@ const Payments = () => {
       <td>
         <div className="action">
           <AiFillEye  className='icon__eye'/>
-          <MdEdit className='icon__edit' />
+          <Link to="/admin/platba/upravit/:id"><MdEdit className='icon__edit' /></Link>
           <FaTrash className='icon__trash' />
         </div>
       </td>
@@ -62,7 +64,7 @@ const Payments = () => {
       <td>
         <div className="action">
           <AiFillEye  className='icon__eye'/>
-          <MdEdit className='icon__edit' />
+          <Link to="/admin/platba/upravit/:id"><MdEdit className='icon__edit' /></Link>
           <FaTrash className='icon__trash' />
         </div>
       </td>
@@ -70,7 +72,7 @@ const Payments = () => {
   </tbody>
 </table>
     </section>
-  
+    </Helmet>
     <Footer />
     </>
   )

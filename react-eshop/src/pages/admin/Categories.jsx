@@ -1,17 +1,19 @@
 import React from 'react'
 import NavbarAdmin from '../../components/admin/NavbarAdmin'
 import Sidebar from '../../components/admin/Sidebar'
-import Footer from '../../components/Footer'
+import Footer from '../../components/admin/Footer'
 import { Link } from 'react-router-dom'
 import {AiFillEye} from 'react-icons/ai'
 import {MdEdit} from 'react-icons/md'
 import {FaTrash} from 'react-icons/fa'
+import Helmet from "../../components/admin/Helmet/Helmet"
 
 const Categories = () => {
   return (
     <>
     <NavbarAdmin/>
     <Sidebar/>
+      <Helmet title="Kategorie">
     <section className='brands'>
       <div className="header__brands">
         <h5 className='text-warning'>Kategorie</h5>
@@ -34,7 +36,7 @@ const Categories = () => {
       <td>
         <div className="action">
           <AiFillEye  className='icon__eye'/>
-          <MdEdit className='icon__edit' />
+          <Link to="/admin/kategorie/upravit/:id"><MdEdit className='icon__edit' /></Link>
           <FaTrash className='icon__trash' />
         </div>
       </td>
@@ -46,7 +48,7 @@ const Categories = () => {
       <td>
         <div className="action">
           <AiFillEye  className='icon__eye'/>
-          <MdEdit className='icon__edit' />
+          <Link to="/admin/kategorie/upravit/:id"><MdEdit className='icon__edit' /></Link>
           <FaTrash className='icon__trash' />
         </div>
       </td>
@@ -58,7 +60,7 @@ const Categories = () => {
       <td>
         <div className="action">
           <AiFillEye  className='icon__eye'/>
-          <MdEdit className='icon__edit' />
+          <Link to="/admin/kategorie/upravit/:id"><MdEdit className='icon__edit' /></Link>
           <FaTrash className='icon__trash' />
         </div>
       </td>
@@ -66,7 +68,7 @@ const Categories = () => {
   </tbody>
 </table>
     </section>
-  
+    </Helmet>
     <Footer />
     </>
   )
