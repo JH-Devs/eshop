@@ -9,7 +9,7 @@ const Reviews = () => {
     <>
     <NavbarAdmin/>
     <Sidebar/>
-    <Helmet title="recenze">
+    <Helmet title="Recenze">
      <section>
     Recenze
      </section>

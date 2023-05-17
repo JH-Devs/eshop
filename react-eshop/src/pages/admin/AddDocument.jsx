@@ -3,12 +3,14 @@ import NavbarAdmin from '../../components/admin/NavbarAdmin'
 import Sidebar from '../../components/admin/Sidebar'
 import Footer from '../../components/admin/Footer'
 import { Link } from 'react-router-dom'
+import Helmet from "../../components/admin/Helmet/Helmet"
 
 const AddDocument = () => {
   return (
     <>
 <NavbarAdmin/>
     <Sidebar/>
+    <Helmet title="Přidat dokument">
      <section className='add__user'>
      <h5 className='text-warning'>Přidat dokument</h5>
      <form>
@@ -27,7 +29,7 @@ const AddDocument = () => {
        </div>
         </form>
      </section>
-  
+     </Helmet>
     <Footer />
 </>
   )

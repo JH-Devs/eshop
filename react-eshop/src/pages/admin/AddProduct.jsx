@@ -3,12 +3,14 @@ import NavbarAdmin from '../../components/admin/NavbarAdmin'
 import Sidebar from '../../components/admin/Sidebar'
 import Footer from '../../components/admin/Footer'
 import { Link } from 'react-router-dom'
+import Helmet from "../../components/admin/Helmet/Helmet"
 
 const AddProduct = () => {
   return (
     <>
 <NavbarAdmin/>
     <Sidebar/>
+    <Helmet title="Přidat produkt">
      <section className='add__user'>
      <h5 className='text-warning'>Přidat produkt</h5>
      <form>
@@ -80,7 +82,7 @@ const AddProduct = () => {
        </div>
         </form>
      </section>
-  
+     </Helmet>
     <Footer />
 </>
   )
