@@ -10,6 +10,8 @@
 @import "./dashboard.scss";
 @import "./users.scss";
 @import "./addUser.scss";
+@import "./brands.scss";
+@import "./products.scss";
 
 
 :root{
@@ -19,7 +21,7 @@ section{
     margin-left: 250px;
     margin-right: 50px;
     margin-top: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 body{
     min-height: 100vh;

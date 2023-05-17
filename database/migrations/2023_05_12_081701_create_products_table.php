@@ -23,6 +23,9 @@ return new class extends Migration
             $table->double('price');
             $table->double('discounted_price');
             $table->text('images');
+            $table->text('images2');
+            $table->text('images3');
+            $table->text('images4');
             $table->foreignIdFor(Category::class)->constrained();
             $table->foreignIdFor(Brand::class)->constrained();
             $table->enum('status', ['aktivní', 'neaktivní'])->default('aktivní');

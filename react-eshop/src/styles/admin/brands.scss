@@ -1,10 +1,10 @@
-.users{
+.brands{
     box-shadow: var(--box-shadow);
     padding: 10px;
     height: 95vh;
     margin-bottom: 50px;
     
-    .header__users{
+    .header__brands{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -22,11 +22,10 @@
     .table{
         margin-top: 25px;
 
-        .img__user{
+        .img__brand{
             height: 40px;
             width: 40px;
-            border-radius: 50%;
-            object-fit: cover;
+            object-fit: contain;
         }
         .action{
             justify-content: space-between;

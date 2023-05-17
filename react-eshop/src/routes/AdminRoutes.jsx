@@ -18,6 +18,12 @@ import Settings from "../pages/admin/Settings"
 import Profile from "../pages/admin/Profile"
 import Messages from "../pages/admin/Messages"
 import AddUser from "../pages/admin/AddUser";
+import AddBrand from "../pages/admin/AddBrand";
+import AddCategory from "../pages/admin/AddCategory"
+import AddShipping from "../pages/admin/AddShipping";
+import AddPayment from "../pages/admin/AddPayment";
+import AddDocument from "../pages/admin/AddDocument";
+import AddProduct from "../pages/admin/AddProduct";
 
 const AdminRoutes=() => {
   return (
@@ -33,19 +39,25 @@ const AdminRoutes=() => {
    <Route path="/admin/uzivatele/pridat" element={<AddUser/>} />
 
    <Route path="/admin/produkty" element={<Products/>} />
+   <Route path="/admin/produkty/pridat" element={<AddProduct/>} />
 
 
    <Route path="/admin/znacky" element={<Brands/>} />
+   <Route path="/admin/znacky/pridat" element={<AddBrand/>} />
 
    <Route path="/admin/kategorie" element={<Categories/>} />
+   <Route path="/admin/kategorie/pridat" element={<AddCategory/>} />
 
    <Route path="/admin/objednavky" element={<Orders/>} />
 
    <Route path="/admin/doprava" element={<Shippings/>} /> 
+   <Route path="/admin/doprava/pridat" element={<AddShipping />} />
 
    <Route path="/admin/platba" element={<Payments/>} />
+   <Route path="/admin/platba/pridat" element={<AddPayment />} />
 
    <Route path="/admin/dokumenty" element={<Documents/>} />
+   <Route path="/admin/dokumenty/pridat" element={<AddDocument/>} />
 
    <Route path="/admin/statistiky" element={<Statictics/>} />
 
