@@ -32,13 +32,20 @@ import EditShipping from "../pages/admin/Editshipping";
 import EditPayment from "../pages/admin/EditPayment"
 import EditDocument from "../pages/admin/EditDocument"
 
+import UserLayout from "../layouts/UserLayout";
+import Home from "../pages/user/Home";
+import Eshop from "../pages/user/Eshop";
+import Contact from "../pages/user/Contact";
+import Blog from "../pages/user/Blog";
+
+
 const AdminRoutes=() => {
   return (
     <>
  <Routes>
   {/* Pages Admin*/}
    <Route path="/admin" element={<AdminLayout />}>
-    <Route index element={<Dashboard />} />
+    <Route path="admin/nastenka" index element={<Dashboard />} />
    </Route>
    <Route path="/admin/nastenka" element={<Dashboard/>} /> 
 
@@ -90,7 +97,19 @@ const AdminRoutes=() => {
 
    <Route path="/admin/profil" element={<Profile/>} />
 
+
+    {/* Pages user*/}
+    <Route path="/" element={<UserLayout />}>
+       <Route path="/home" index element={<Home />} />
+    </Route>
+    <Route path="/eshop" element={<Eshop/>} />
+    <Route path="/kontakt" element={<Contact/>} />
+    <Route path="/Blog" element={<Blog/>} />
+
+
  </Routes>
+
+
  </>
   )
 }
